@@ -25,6 +25,7 @@ def output_dir() -> Path:
 
 
 def main() -> None:
+    # Read the entry once, write it once: the bytes out are the bytes in.
     destination = output_dir()
     destination.mkdir(parents=True, exist_ok=True)
     text = entry_path().read_bytes()
